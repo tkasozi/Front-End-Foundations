@@ -5,6 +5,9 @@
 html,body{
     min-height: 100%;
 }
+/**
+Sticky footer css
+*/
 .page-wrapper {
     min-height: 100vh;
     /* equal to footer height */
@@ -16,4 +19,9 @@ html,body{
   }
 .site-footer, .page-wrapper:after{
     height: 21rem;
+}
+/* end of sticky footer css */
+
+.header{
+    background-color: #e3f2fd;
 }

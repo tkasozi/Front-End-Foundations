@@ -1,0 +1,15 @@
+{
+    "about":{
+        "Name": "Talik A. Kasozi",
+        "img": "https://avatars0.githubusercontent.com/u/12478423?s=400&u=12e226ab33fb74ad33d8e2e4b9c307dcdda2959b&v=4",
+        "summary": "Objective is to work as a Software Engineer for a company that grows while providing its employees the resources to improve their knowledge and skills. 3 years experience in Java and C/C++ and competent in software build tools like Maven. Received B.S. in Computer Science and additional Mathematics, with room to grow as a software Engineer. I have worked on both individual and team oriented projects and I get along well with others.",
+        "education": ["University of Massachusetts, Lowell, MA Bachelor of Computer Science and Mathematics (Dual degree) 2016"],
+        "projects": [
+            {
+                "date":"January 2017 – October 2017",
+                "Stock Analysis Application":"Recently collaborated on a Stock Market analyzer using sentiment analysis of the stock to advise investors. In a team of three, I was responsible for the Machine Learning part of the application. Development of Machine Learning in MySQL and Java (Maven), with use of libraries like Weka, Lucene and Stanford Natural Language Processor."
+            }
+        ]
+    },
+    "test":{}
+}

@@ -1,13 +1,11 @@
 import React from 'react';
 
-//#F8F8F8
-//    marginTop: "1rem",
-// minHeight: "21rem",
 var style = {
-    backgroundColor: "purple",
+    backgroundColor: "#F8F8F8",
     borderTop: "1px solid #E7E7E7",
+    minWidth: "100%",
     padding: "3rem",
-    width: "100%",
+    minHeight: "21rem"
 };
 
 export class Footer extends React.Component{

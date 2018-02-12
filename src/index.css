@@ -1,38 +1,19 @@
 *, .App{
     margin: 0;
+    padding: 0
 }
 html,body{
     min-height: 100%;
-    background-color: yellow;
 }
-.page-wrap {
-    min-height: 100%;
+.page-wrapper {
+    min-height: 100vh;
     /* equal to footer height */
-      margin-bottom: -142px; 
-  }
-  .page-wrap:after {
+      margin-bottom: -21rem; 
+}
+.page-wrapper:after{
     content: "";
     display: block;
   }
-.site-footer, .page-wrapper::after{
-    min-height: 17em;
-}
-.App{
-    background-color: lightblue;
-}
-.main-content{
-    background-color: #000;
-}
-.main-content{
-    min-height: 100vh;    
-}
-.center{
-    text-align: center
-}
-.red{background-color: red}
-.main-content{
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    margin-bottom: -1rem;
+.site-footer, .page-wrapper:after{
+    height: 21rem;
 }

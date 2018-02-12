@@ -1,8 +1,4 @@
-html,body,#root,#App{
+html,body{
     min-height: 100vh;
     background-color: #fff;
-}
-.test{background-color: red;}
-.main,.content{
-    min-height: 100%;
 }

@@ -6,7 +6,7 @@ import {Footer} from './js/footer.js';
 
 class App extends Component {
     render(){
-        const {header, main, footer} = this.props;
+        //const {header, main, footer} = this.props;
         return(
            <section className="App">
                <section className="main-content">
@@ -22,7 +22,6 @@ class App extends Component {
                         <div className="col-md-2 red"></div>                                                            
                     </section>
                 </section>
-                <Footer />
             </section>
         );
     }
@@ -32,3 +31,8 @@ ReactDOM.render(
     <App />,
     document.getElementById('content')
 ); 
+
+ReactDOM.render(
+    <Footer />,
+    document.getElementById('footer')    
+);

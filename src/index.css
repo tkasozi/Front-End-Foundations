@@ -1,4 +1,25 @@
 html,body{
-    min-height: 100vh;
-    background-color: #fff;
+    margin:0;
+    padding: 0;
+    min-height: 100%;
+    background-color: yellow;
+}
+.App{
+    background-color: lightblue;
+}
+.main-content{
+    background-color: #000;
+}
+.main-content{
+    min-height: 100vh;    
+}
+.center{
+    text-align: center
+}
+.red{background-color: red}
+.main-content{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    margin-bottom: -1rem;
 }

@@ -8,18 +8,18 @@ class App extends Component {
     render(){
         const {header, main, footer} = this.props;
         return(
-           <section class="App">
-               <section class="content">
-                    <section class="header">
+           <section className="App">
+               <section className="main-content">
+                    <section className="header">
                         <h1>Header goes here!!</h1>
                         <hr/>
                     </section>
-                    <section class="main">
-                        <div class="col-md-2"></div>                        
-                        <section class="col-md-2 test">
+                    <section className="main col-md-12">
+                        <div className="col-md-2 red"></div>                        
+                        <section className="col-md-8 center">
                             <Main />
                         </section>
-                        <div class="col-md-2"></div>                                                            
+                        <div className="col-md-2 red"></div>                                                            
                     </section>
                 </section>
                 <Footer />

@@ -30,7 +30,7 @@ class App extends Component {
     render(){
         //const {header, main, footer} = this.props;
         return(
-            <div className="content">
+            <div>
                 <section className="App page-wrapper">
                     <header id="header">
                         <Header />

@@ -18,10 +18,11 @@ Sticky footer css
     display: block;
   }
 .site-footer, .page-wrapper:after{
-    height: 21rem;
+    min-height: 21rem;
 }
 /* end of sticky footer css */
 
 .header{
-    background-color: #e3f2fd;
+    /*background-color: #e3f2fd;*/
+    background-color: #F8F8F8;
 }

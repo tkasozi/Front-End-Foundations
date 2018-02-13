@@ -1,17 +1,20 @@
 import React from 'react';
 
-var style = {
+let style = {
     backgroundColor: "#F8F8F8",
     borderTop: "1px solid #E7E7E7",
     minWidth: "100%",
     padding: "3rem",
     minHeight: "21rem"
 };
-var copy ={
+let copy ={
     position:"relative",
-    marginTop: "50%",
+    marginTop: "35%",
     float:"right"
 };
+let email ={
+    paddingTop: "5rem",
+}
 export class Footer extends React.Component{
     render(){
         return(
@@ -45,8 +48,14 @@ export class Footer extends React.Component{
                         }
                     </div>
                     <div className="col-md-4">
+                        <span>Personal Information</span><br/><br/>
                         {
-                            <span style={copy}>Copyrights &copy; 2018 by Talik Kasozi</span>
+                            <div>
+                                <span style={email}>
+                                    <i className="glyphicon glyphicon-envelope">&nbsp;talik.aziizi@gmail.com</i>
+                                </span>
+                                <span style={copy}>Copyrights &copy; 2018 by Talik Kasozi</span>
+                            </div>
                         }
                     </div>
                 </div>

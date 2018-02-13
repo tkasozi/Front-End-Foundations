@@ -45,7 +45,7 @@ class App extends Component {
                                 </section>
                                 <div className="col-md-1"></div>                                                            
                             </section>
-                        </section>
+                    </section>
                 </section>
                 <footer id="footer" class="site-footer">
                     <Footer />

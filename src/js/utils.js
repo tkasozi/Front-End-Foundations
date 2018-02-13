@@ -19,23 +19,3 @@ export function addScript(url = "", async = false, integrity="",crossorigin=""){
     script.crossorigin = crossorigin;
     document.body.appendChild(script);
 }
-
-export function stickyFooter(){
-    
-}
-/**
- * Linking [Bootstrap].css,.js & JQuery
- *
-export class Link extends Component{
-    render(){
-        return(
-            addStyle("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css",
-            "sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", "anonymous"),
-            addScript("https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"),
-            addScript("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",false,
-            "sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa","anonymous"),
-            <div></div>           
-        );
-    }
-}
-*/

@@ -1,5 +1,5 @@
 import React from 'react';
-import * as DATA from '../about.json';
+import * as DATA from '../about.json'; // will be done using Nodejs BackEnd
 import  { BrowserRouter as Router, Route, Link}  from 'react-router-dom';
 
 const style ={
@@ -47,6 +47,9 @@ class Main extends React.Component{
     constructor(props){
         super(props);
         this.data = DATA.about;
+    }
+    callApi = async () => {
+
     }
     render(){
         return(

@@ -5,7 +5,8 @@ let style = {
     borderTop: "1px solid #E7E7E7",
     minWidth: "100%",
     padding: "3rem",
-    minHeight: "21rem"
+    minHeight: "21rem",
+    fontSize: "1.7rem"
 };
 let copy ={
     position:"relative",
@@ -14,6 +15,10 @@ let copy ={
 };
 let email ={
     paddingTop: "5rem",
+}
+let imgStyle={
+    width: "2.5rem",
+    height: "2.5rem"
 }
 export class Footer extends React.Component{
     render(){
@@ -35,7 +40,9 @@ export class Footer extends React.Component{
                             <a target="_blanck" className="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/tkasozi/">
                             <span className="fa fa-linkedin">&nbsp;linkedIn</span>
                             </a><br/>
-                            <a target="_blanck" className="btn btn-social-icon btn-leetcode"href="https://leetcode.com/tkasozi/">leetcode</a>
+                            <a target="_blanck" className="btn btn-social-icon btn-leetcode"href="https://leetcode.com/tkasozi/">
+                              <img style={imgStyle} src="https://d2wnixsywa9nb4.cloudfront.net/wp-content/uploads/2017/12/02135818/LeetCode_logo.png"/>leetcode 
+                            </a>
                        </div>
                     </div>
                     <div className="col-md-4">

@@ -1,24 +1,26 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import  {Route, Link}  from 'react-router-dom';
 import './index.css';
 import {Header} from './js/header.js';
-import {Main} from './js/MainContent.js';
+import Main from './js/MainContent.js';
 import {Footer} from './js/footer.js';
+import  { BrowserRouter as Router, Route, Link}  from 'react-router-dom';
 
 class App extends Component {
+    //<p className="">{this.state.response}</p>
     constructor(props){
         super(props);
         this.state = {
             response: ''
         };
+        
     }
     componentDidMount() {
         this.callApi()
           .then(res => this.setState({ response: res.express }))
           .catch(err => console.log(err));
     }
-    
+
     callApi = async () => {
         const response = await fetch('/api/about');
         const body = await response.json();
@@ -28,34 +30,32 @@ class App extends Component {
         return body;
     };
     render(){
-        //const {header, main, footer} = this.props;
         return(
-            <div>
-                <section className="App page-wrapper">
-                    <header id="header">
-                        <Header />
-                    </header>
-                    <section className="container">
-                            <section className="col-md-12">
-                                <div className="col-md-1"></div>                        
-                                <section className="col-md-10">
-                                    <Main />
-                                    <p className="App-intro">{this.state.response}</p>
-                                    {console.log(this.props)}
+            <Router>
+                <div>
+                    <section className="App page-wrapper">
+                        <header id="header">
+                            <Header />
+                        </header>
+                        <section className="container">
+                                <section className="col-md-12">
+                                    <div className="col-md-1"></div>                        
+                                    <section className="col-md-10">
+                                        <Main />
+                                    </section>
+                                    <div className="col-md-1"></div>                                                            
                                 </section>
-                                <div className="col-md-1"></div>                                                            
-                            </section>
+                        </section>
                     </section>
-                </section>
-                <footer id="footer" class="site-footer">
-                    <Footer />
-                </footer>
-            </div>    
-            
+                    <footer id="footer" class="site-footer">
+                        <Footer />
+                    </footer>
+                </div>    
+            </Router>
         );
     }
 }
- 
+
 ReactDOM.render(
     <App />,
     document.getElementById('content')

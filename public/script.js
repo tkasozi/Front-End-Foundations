@@ -1,9 +1,14 @@
 $(document).ready(function(){
     //$('footer').css('margin-top',$('.main-content').height()/2);
-    while(true){
-      $(".btn").on("mouseover", function() {
-          $(this).css('font-size','large');
-      });
-      $('.btn').on('mouseleave',()=> $(this).css('font-size','13px'));
-    }
+    awesomeFunc('btn');
+    awesomeFunc('nav-btn');    
 });
+
+let awesomeFunc = (className) =>{
+    const element = $('.'+className);
+    element.on("mouseover", function() {
+          $(this).addClass('awesome-font');
+      }).on('mouseleave',()=> {
+        $(element).removeClass('awesome-font'); 
+      });
+}

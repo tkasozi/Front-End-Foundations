@@ -1,8 +1,9 @@
 import React from 'react';
 import * as DATA from '../about.json';
+import  { BrowserRouter as Router, Route, Link}  from 'react-router-dom';
 
 const style ={
-    textAlign: "left"
+    textAlign: "right"
 }
 
 class About extends React.Component{
@@ -35,30 +36,38 @@ class About extends React.Component{
     }
 } 
 
-//<button onClick = {() => this.formatAbout()}>click</button>
-export class Main extends React.Component{
+class Repo extends React.Component{
+    render(){
+        return(
+            <p>Repository will go here.</p>
+        );
+    }
+}
+class Main extends React.Component{
     constructor(props){
         super(props);
         this.data = DATA.about;
-        this.education = this.data.education;
-        this.project = this.data.projects.map((item,index) => <p key={index}>{item}</p>);
     }
     render(){
         return(
             <div className="content col-md-12">
                 <div className="col-md-8">
-                   <About summary={this.data.summary} edu={this.education} proj={this.project}/>
-                   {this.props.location}
+                  <Route path="/about" render={
+                      (props) => <About summary={this.data.summary} 
+                                        edu={this.data.education} 
+                                        proj={this.data.projects.map((item,index) => <p key={index}>{item}</p>)}/>}
+                  />
+                  <Route path="/repo" component={Repo} />
                 </div>
                 <div className="col-md-2">
-                    <section className="row">
-                        <img src= {this.data.img}/>
-                    </section>
-                    <section className="row">
-                        <h4>{this.data.name}</h4>
+                    <section className="row" style={style}>
+                        <img src= {this.data.img} className="rcorners"/>
+                        <h4 >{this.data.name}</h4>
                     </section>
                 </div>
             </div>
         );
     }
 }
+
+export default Main;

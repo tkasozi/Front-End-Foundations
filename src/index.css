@@ -26,3 +26,14 @@ Sticky footer css
     /*background-color: #e3f2fd;*/
     background-color: #F8F8F8;
 }
+
+.awesome-font{
+    font-size: 3.7rem;
+}
+
+.rcorners{
+    border-radius: 360%;
+    border: 2px solid #F8F8F8;
+    width: 27rem;
+    height: 27rem;    
+}

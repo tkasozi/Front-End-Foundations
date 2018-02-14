@@ -1,17 +1,29 @@
 {
     "about":{
-        "name": "Talik Kasozi",
-        "img": "https://avatars0.githubusercontent.com/u/12478423?s=400&u=12e226ab33fb74ad33d8e2e4b9c307dcdda2959b&v=4",
-        "summary": "Objective is to work as a Software Engineer for a company that grows while providing its employees the resources to improve their knowledge and skills. 3 years experience in Java and C/C++ and competent in software build tools like Maven. Received B.S. in Computer Science and additional Mathematics, with room to grow as a software Engineer. I have worked on both individual and team oriented projects and I get along well with others.",
-        "education": ["University of Massachusetts, Lowell, MA Bachelor of Computer Science and Mathematics (Dual degree) 2016"],
-        "projects": [
-            ["Recently collaborated on a Stock Market analyzer using sentiment analysis of the stock to advise investors. In a team of three, I was responsible for the Machine Learning part of the application. Development of Machine Learning in MySQL and Java (Maven), with use of libraries like Weka, Lucene and Stanford Natural Language Processor."
+        "summary": ["Objective is to work as a Software Engineer for a company that grows while providing its employees the resources to improve their knowledge and skills. 3 years experience in Java and C/C++ and competent in software build tools like Maven. Received B.S. in Computer Science and additional Mathematics, with room to grow as a software Engineer. I have worked on both individual and team oriented projects and I get along well with others."],
+        "edu": [
+            "University of Massachusetts, Lowell, MA Bachelor of Computer Science and Mathematics (Dual degree) 2016"
         ],
-             ["Stock Analysis Application"]
+        "proj":[
+            [
+                "Stock Analysis Application",
+                "Recently collaborated on a Stock Market analyzer using sentiment analysis of the stock to advise investors. In a team of three, I was responsible for the Machine Learning part of the application. Development of Machine Learning in MySQL and Java (Maven), with use of libraries like Weka, Lucene and Stanford Natural Language Processor."                   
+            ],
+            [ "Ar-Raheem Academy",
+                "Designed then helped develop the foundation of a non-profit organization’s website – with the latest Web Development technologies in NodeJs, ElasticSearch, and Bootstrap. Simultaneously implementing reusable tools like a Type-Ahead and search functionality."
+            ],[
+                "SappyTrends",
+                "Collaborated on a Big Data application that feeds news by crawling CNN, FOX News, and other major sources. The fetched data is parsed with the Stanford Natural Language Processor to extract trending entities, then with Machine Learning to analyze sentiments and categorize the information. The application is developed using the MEAN Stack, MySQL, and Java. Initial phase of some Machine Learning algorithms i.e. The Bag of Words algorithm using Naive Bayes was done in MATLAB."
+            ],
+            [
+                "Web Cars",
+                "Currently developing a course project with a team of two where users can sell and buy cars. This application uses a RESTful API implemented in the MEAN Stack. WebCars supports multiple functionalities such as filtering options and leaving feedback to sellers."
+            ],[
+                "TelexHelper",
+                "Collaborated on a third party advertising website and an automated advertising service for a TelexFree agency in Lowell, MA. The application was implemented to handle hundreds of user accounts using MEAN Stack and Java."
+            ]
         ],
-        "descrptions":[
-            "Recently collaborated on a Stock Market analyzer using sentiment analysis of the stock to advise investors. In a team of three, I was responsible for the Machine Learning part of the application. Development of Machine Learning in MySQL and Java (Maven), with use of libraries like Weka, Lucene and Stanford Natural Language Processor.",
-            "**Recently collaborated on a Stock Market analyzer using sentiment analysis of the stock to advise investors. In a team of three, I was responsible for the Machine Learning part of the application. Development of Machine Learning in MySQL and Java (Maven), with use of libraries like Weka, Lucene and Stanford Natural Language Processor."                        
-        ]
+        "key":[{ "name": "Talik Kasozi", "img": "https://avatars0.githubusercontent.com/u/12478423?s=400&u=12e226ab33fb74ad33d8e2e4b9c307dcdda2959b&v=4"}
+            ,"summary","education","projects"]
     }
 }

@@ -7,28 +7,6 @@ import {Footer} from './js/footer.js';
 import  { BrowserRouter as Router, Route, Link}  from 'react-router-dom';
 
 class App extends Component {
-    //<p className="">{this.state.response}</p>
-    constructor(props){
-        super(props);
-        this.state = {
-            response: ''
-        };
-        
-    }
-    componentDidMount() {
-        this.callApi()
-          .then(res => this.setState({ response: res.express }))
-          .catch(err => console.log(err));
-    }
-
-    callApi = async () => {
-        const response = await fetch('/api/about');
-        const body = await response.json();
-    
-        if (response.status !== 200) throw Error(body.message);
-    
-        return body;
-    };
     render(){
         return(
             <Router>
@@ -47,7 +25,7 @@ class App extends Component {
                                 </section>
                         </section>
                     </section>
-                    <footer id="footer" class="site-footer">
+                    <footer id="footer" className="site-footer">
                         <Footer />
                     </footer>
                 </div>    

@@ -32,8 +32,21 @@ Sticky footer css
 }
 
 .rcorners{
+    float: none;
     border-radius: 360%;
     border: 2px solid #F8F8F8;
     width: 27rem;
     height: 27rem;    
+}
+.highlight {
+    border-radius: 1px;
+    background: #FFFBCC;
+    padding: 1px; 
+}
+
+.shadow-wrapper {
+    width: fit-content;
+    background-color: purple;
+    clear:both;
+    overflow:hidden;
 }

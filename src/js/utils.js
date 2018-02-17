@@ -1,5 +1,14 @@
 import React, {Component} from 'react';
 
+export const callApi = async (query) => {
+    let path =  '/api/'+query;
+    const response = await fetch(path);
+    const body = await response.json();
+
+    if (response.status !== 200) throw Error(body.message);        
+    return body;
+};
+
 export function addStyle(url = "", integrity="",crossorigin=""){
     const link = document.createElement('link');
 

@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {Header} from './js/header.js';
-import Main from './js/MainContent.js';
-import {Footer} from './js/footer.js';
+import {Header} from './js/header';
+import Main from './js/MainContent';
+import {Footer} from './js/footer';
 import  { BrowserRouter as Router, Route, Link}  from 'react-router-dom';
 
 class App extends Component {

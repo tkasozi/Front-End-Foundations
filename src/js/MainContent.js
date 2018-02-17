@@ -1,5 +1,6 @@
 import React from 'react';
 import  { BrowserRouter as Router, Route, Link}  from 'react-router-dom';
+//import {callApi} from './utils';
 
 const style ={
     textAlign: "right"
@@ -14,7 +15,7 @@ let callApi = async (query) => {
     return body;
 };
 
-class About extends React.Component{
+class Resume extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -41,11 +42,17 @@ class About extends React.Component{
             callApi('key')
               .then(res => this.setState({key: res.express}))
               .catch(err => console.log(err));
-
     }
+
     render(){
         return(
-            <section style={{float: "left"}}>
+            <section>
+                <section>
+                    {this.state.key.length > 1 ? 
+                        <img src={this.state.key[0].img} className="rcorners"/> : 
+                        <div></div>
+                    }
+                </section><br/>
                 <section className="text">
                     <h1 className="h1">{this.state.key[1]}</h1>
                     {this.state.summary.map((i,j) => <p key={j}>{i}</p>)}
@@ -59,14 +66,16 @@ class About extends React.Component{
                     <div style={{clear:"left"}}>
                         {
                             this.state.proj.map(
-                                (_Array, i) => <div key={i}>
-                                    {
-                                        _Array.map(
-                                            (item, j) => j === 0 ? <span key={j} className="h4">{item}</span> :
-                                                        <p key={j}>{item}</p>
-                                        )
-                                    }
-                                </div>
+                                (_Array, i) => 
+                                    <div key={i}>
+                                        {
+                                            _Array.map(
+                                                (item, j) => j === 0 ? 
+                                                    <span key={j} className="h4">{item}</span> :
+                                                            <p key={j}>{item}</p>
+                                            )
+                                        }
+                                    </div>
                             )
                         }
                     </div>
@@ -84,6 +93,13 @@ class Repo extends React.Component{
     }
 }
 
+class Welcome extends React.Component{
+    render(){
+        return(
+            <p className="h1">Welcome to my site. <em>A Front End Foundations </em> WozU project </p>
+        );
+    }
+}
 class Main extends React.Component{
     constructor(props){
         super(props);
@@ -91,9 +107,7 @@ class Main extends React.Component{
             key:[]
         };
     }
-    loading ={
-        color: "green"
-    }
+
     componentDidMount(){
         callApi('key')
               .then(res => this.setState({key: res.express}))
@@ -101,21 +115,12 @@ class Main extends React.Component{
     }// Themes	#E0FFFF , #F08080
     render(){
         return(
-            <div className="content">           
-                <div className="col-md"  >
-                    <section>
-                            {this.state.key.length > 1? 
-                                <div className="shadow-wrapper">
-                                    <img src={this.state.key[0].img} className="rcorners"/>
-                                    <br/>
-                                    <span className="h3 highlight">{this.state.key[0].name}</span>
-                                </div>
-                                : <div></div>}
-                            <Route path="/about" component={About} />
-                            <Route path="/repo" component={Repo} />  
-                    </section>   
+            <section className="content">  
+                <div className="shadow-wrapper">
+                    <Route path="/about" component={Resume} />
+                    <Route path="/repo" component={Repo} /> 
                 </div>
-            </div>
+            </section>   
         );
     }
 }

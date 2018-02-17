@@ -38,15 +38,14 @@ Sticky footer css
     width: 27rem;
     height: 27rem;    
 }
-.highlight {
+.highlight,em {
     border-radius: 1px;
     background: #FFFBCC;
     padding: 1px; 
 }
 
-.shadow-wrapper {
-    width: fit-content;
-    background-color: purple;
-    clear:both;
-    overflow:hidden;
+div.shadow-wrapper, .shadow-wrapper img {
+    float:  left;
+    padding: 1.5rem;
 }
+.shadow-wrapper img {border: 0}

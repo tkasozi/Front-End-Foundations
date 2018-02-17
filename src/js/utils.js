@@ -19,3 +19,4 @@ export function addScript(url = "", async = false, integrity="",crossorigin=""){
     script.crossorigin = crossorigin;
     document.body.appendChild(script);
 }
+

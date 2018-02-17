@@ -49,3 +49,17 @@ div.shadow-wrapper, .shadow-wrapper img {
     padding: 1.5rem;
 }
 .shadow-wrapper img {border: 0}
+
+/** Repository page */
+#repo div a{
+    text-align: center
+}
+/**
+Fix this background alt coloring
+*/
+#repo ul:nth-last-child(odd){
+    background-color: lightblue;
+}
+#repo ul:nth-last-child(even){
+    background-color: lightgreen;
+}

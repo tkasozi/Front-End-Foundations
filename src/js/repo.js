@@ -7,34 +7,33 @@ export class Repo extends React.Component{
         super(props);
         this.state ={
             isLoaded: false,
-            tems: []
+            items: []
         }
     }
     componentDidMount(){
-     fetch("https://github.com/tkasozi/repos")
-      .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            isLoaded: true,
-            items: result.items
-          });
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      )
+      callApi('https://api.github.com/users/tkasozi/repos')
+      .then(res => this.setState({items: res}))
+        .catch(err => console.log(err));
     }
-
+/** 
+ <a href={item.html_url}>{item.name}</a>
+*/
     render(){
         return(
-            <p>Repository will go here.</p>
+            <section id="repo">
+                <div className="list-group">
+                  <li className="h1 list-group-item active">Current Repositories</li>
+                  {
+                    this.state.items.map(
+                      (item, i) => 
+                        <a target="_blank" href={item.html_url} 
+                            className="list-group-item list-group-item-action" key={i}>
+                          {item.name}
+                        </a>
+                    )
+                  }
+                </div>
+            </section>
         );
     }
 }

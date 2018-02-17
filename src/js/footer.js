@@ -41,7 +41,7 @@ export class Footer extends React.Component{
                             <span className="fa fa-linkedin">&nbsp;linkedIn</span>
                             </a><br/>
                             <a target="_blanck" className="btn btn-social-icon btn-leetcode"href="https://leetcode.com/tkasozi/">
-                              <img style={imgStyle} src="https://d2wnixsywa9nb4.cloudfront.net/wp-content/uploads/2017/12/02135818/LeetCode_logo.png"/>leetcode 
+                              <img alt={""} style={imgStyle} src="https://d2wnixsywa9nb4.cloudfront.net/wp-content/uploads/2017/12/02135818/LeetCode_logo.png"/>leetcode 
                             </a>
                        </div>
                     </div>

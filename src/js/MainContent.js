@@ -2,18 +2,12 @@ import React from 'react';
 import  { BrowserRouter as Router, Route, Link}  from 'react-router-dom';
 import {Resume} from './resume';
 import {callApi} from './utils';
+import {Repo} from './repo';
 
 const style ={
     textAlign: "right"
 }
 
-class Repo extends React.Component{
-    render(){
-        return(
-            <p>Repository will go here.</p>
-        );
-    }
-}
 //TODO: How to from re-route [/] to [/about]
 class Welcome extends React.Component{
     render(){

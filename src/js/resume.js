@@ -16,17 +16,16 @@ export class Resume extends React.Component{
     }
     
     componentDidMount(){
-            callApi('edu')
+            callApi('/api/edu')
             .then(res => this.setState({edu: res.express}))
               .catch(err => console.log(err));
-              console.log(this.state.user)
-            callApi('summary')
+            callApi('/api/summary')
               .then(res => this.setState({summary: res.express}))
               .catch(err => console.log(err));
-            callApi('proj')
+            callApi('/api/proj')
               .then(res => this.setState({proj: res.express}))
               .catch(err => console.log(err));
-            callApi('key')
+            callApi('/api/key')
               .then(res => this.setState({key: res.express}))
               .catch(err => console.log(err));
     }
@@ -36,7 +35,7 @@ export class Resume extends React.Component{
             <section>
                 <section>
                     {this.state.key.length > 1 ? 
-                        <img src={this.state.key[0].img} className="rcorners"/> : 
+                        <img alt={""} src={this.state.key[0].img} className="rcorners"/> : 
                         <div></div>
                     }
                 </section><br/>
@@ -58,7 +57,7 @@ export class Resume extends React.Component{
                                         {
                                             _Array.map(
                                                 (item, j) => j === 0 ? 
-                                                    <span key={j} className="h4">{item}</span> :
+                                                    <span key={j} className="h4"><em>{item}</em></span> :
                                                             <p key={j}>{item}</p>
                                             )
                                         }

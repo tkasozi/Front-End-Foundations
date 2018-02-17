@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
-export const callApi = async (query) => {
-    let path =  '/api/'+query;
+export const callApi = async (path) => {
+    //let path =  '/api/'+query;
     const response = await fetch(path);
     const body = await response.json();
 

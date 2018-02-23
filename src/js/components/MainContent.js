@@ -1,9 +1,7 @@
 import React from 'react';
 import {Redirect} from 'react-router';
 import  { BrowserRouter as Router, Route, Link}  from 'react-router-dom';
-import Resume from './resume';
-import {Repo} from './repo';
-
+import { Resume, Repo} from './screens/screens';
 
 class Main extends React.Component{
     constructor(props){

@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from './search';
 
-export class Header extends React.Component{
+class Header extends React.Component{
     render(){
         return(
                 <nav id="header" className="navbar sticky-top navbar-light header">
@@ -19,3 +19,5 @@ export class Header extends React.Component{
         );
     }
 }
+
+export default Header;

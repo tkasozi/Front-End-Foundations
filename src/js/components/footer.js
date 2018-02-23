@@ -20,7 +20,7 @@ let imgStyle={
     width: "2.5rem",
     height: "2.5rem"
 }
-export class Footer extends React.Component{
+ class Footer extends React.Component{
     render(){
         return(
             <div style={style} className="container">
@@ -70,3 +70,5 @@ export class Footer extends React.Component{
         );
     }
 }
+
+export default Footer;

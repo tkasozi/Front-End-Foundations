@@ -1,8 +1,8 @@
 import React from 'react';
 //import  { BrowserRouter as Router, Route, Link}  from 'react-router-dom';
-import {callApi} from './utils';
+import {callApi} from '../utils';
 
-export class Repo extends React.Component{
+ class Repo extends React.Component{
     constructor(props){
         super(props);
         this.state ={
@@ -37,3 +37,5 @@ export class Repo extends React.Component{
         );
     }
 }
+
+export default Repo;

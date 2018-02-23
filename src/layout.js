@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
-import {Header} from './js/components/header';
-import Main from './js/components/MainContent';
-import {Footer} from './js/components/footer';
+import {Header, Main, Footer} from './js/components/components'
 import  { BrowserRouter as Router, Route, Link}  from 'react-router-dom';
 
 class Layout extends Component {

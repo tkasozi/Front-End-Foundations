@@ -1,7 +1,7 @@
 import React from 'react';
-import {callApi} from './utils';
+import {callApi} from '../utils';
 
-export default class Resume extends React.PureComponent{
+class Resume extends React.PureComponent{
     constructor(props){
         super(props);
         this.state = {
@@ -69,3 +69,5 @@ export default class Resume extends React.PureComponent{
         );
     }
 }
+
+export default Resume;

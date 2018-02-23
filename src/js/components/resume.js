@@ -1,8 +1,7 @@
 import React from 'react';
-//import  { BrowserRouter as Router, Route, Link}  from 'react-router-dom';
 import {callApi} from './utils';
 
-export class Resume extends React.Component{
+export default class Resume extends React.PureComponent{
     constructor(props){
         super(props);
         this.state = {
@@ -16,18 +15,18 @@ export class Resume extends React.Component{
     }
     
     componentDidMount(){
-            callApi('/api/edu')
+        callApi('/api/edu')
             .then(res => this.setState({edu: res.express}))
+            .catch(err => console.log(err));
+        callApi('/api/summary')
+            .then(res => this.setState({summary: res.express}))
               .catch(err => console.log(err));
-            callApi('/api/summary')
-              .then(res => this.setState({summary: res.express}))
-              .catch(err => console.log(err));
-            callApi('/api/proj')
-              .then(res => this.setState({proj: res.express}))
-              .catch(err => console.log(err));
-            callApi('/api/key')
-              .then(res => this.setState({key: res.express}))
-              .catch(err => console.log(err));
+        callApi('/api/proj')
+            .then(res => this.setState({proj: res.express}))
+            .catch(err => console.log(err));
+        callApi('/api/key')
+            .then(res => this.setState({key: res.express}))
+            .catch(err => console.log(err));
     }
 
     render(){
